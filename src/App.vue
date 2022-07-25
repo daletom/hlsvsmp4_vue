@@ -46,36 +46,27 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img class="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://ix-www.imgix.net/press/imgix-unsplash.jpeg?w=1200&auto=format,compress&cs=srgb" alt="" />
+      <img class="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://tom.imgix.net/hlsvsmp4.png?w=1200&auto=format,compress&cs=srgb" alt="Header Image for HLS vs MP4" />
     </div>
   </div>
   
-   <section aria-labelledby="collections-heading" class="min-h-screen bg-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+   <section aria-labelledby="collections-heading" class="min-h-screen px-4 py-12 bg-gray-800 sm:px-6 lg:px-8">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:py-32 lg:max-w-none">
-            <h2 id="collections-heading" class="text-2xl text-center font-extrabold text-white">Testing HLS (Left) vs MP4 (Right)</h2>
-            <h3 id="collections-heading" class="text-lg text-center font-extrabold text-white">Try Throttling Your Network Tab to 3G to See HLS Adapt to Lower Quality Networks. Press play on both videos.</h3>
+            <h2 id="collections-heading" class="text-2xl font-extrabold text-center text-white">Testing HLS (Left) vs MP4 (Right)</h2>
+            <h3 id="collections-heading" class="text-lg font-extrabold text-center text-white">Try Throttling Your Network Tab to 3G to See HLS Adapt to Lower Quality Networks. Press play on both videos.</h3>
 
-            <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6">
+            <div class="mt-6 space-y-12">
               <div class="relative group">
-                <div class="relative w-full overflow-hidden bg-white rounded-lg h-80 sm:aspect-w-3 sm:aspect-h-2 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-green-600 border-solid border-2">
+                <div class="relative w-full overflow-hidden bg-white border-2 h-120">
                   <ix-video
                     controls
-                    source="https://assets.imgix.video/videos/girl-reading-book-in-library.mp4"
-                    @error="(event) => warn('error:', event)"
-                    class="object-cover object-center w-full h-full" >
-                  </ix-video>
-                </div>
-                </div>
-                <div class="relative group">
-                 <div class="relative w-full overflow-hidden bg-white rounded-lg h-80 sm:aspect-w-3 sm:aspect-h-2 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-orange-600 border-solid border-2">
-                  <ix-video
-                    controls
-                    source="https://assets.imgix.net/videos/girl-reading-book-in-library.mp4"
+                    source="https://ix-www.imgix.video/colombia.mov?fm=mp4"
                     type="video/mp4"
                     @error="(event) => warn('error:', event)"
-                    class="object-cover object-center w-full h-full" >
-                    </ix-video>
+                    class="object-cover object-center w-full h-full vjs-loading-spinng"
+                    >
+                  </ix-video>
                 </div>
                 </div>
               </div>
@@ -84,3 +75,14 @@
       </section>
       <TheFooter />
 </template>
+
+<style>
+.vjs-loading-spinner {
+  width: 250px;
+  height: 250px;
+  border: 12px solid white;
+  border-radius: 125px;
+  top: 40%;
+  left: 45%;
+}
+</style>
